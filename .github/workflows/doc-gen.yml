@@ -22,7 +22,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       ## Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      #- uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
       #- name: Run a one-line script
@@ -36,7 +36,7 @@ jobs:
       #- run: echo "foo" > input.txt  # create an example file
       - uses: docker://pandoc/core:2.9
         with:
-          args: "-s -o ./Documentation~/index.html ./Documentation~/index.md"
+          args: "-s ./Documentation~/index.md -o ./Documentation~/index.html "
 
 
 #jobs:
