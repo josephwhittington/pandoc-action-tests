@@ -36,7 +36,7 @@ jobs:
       #- run: echo "foo" > input.txt  # create an example file
       - uses: docker://pandoc/core:2.9
         with:
-          args: "-s -o Documentation~/index.html Documentation~/index.md"
+          args: "-s -o ./Documentation~/index.html ./Documentation~/index.md"
 
 
 #jobs:
