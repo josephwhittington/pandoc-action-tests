@@ -19,7 +19,6 @@ jobs:
   convert_via_pandoc:
     # The type of runner that the job will run on
     runs-on: ubuntu-18.04
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       ## Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -35,7 +34,6 @@ jobs:
       #    echo Add other actions to build,
       #    echo test, and deploy your project.
       #- run: echo "foo" > input.txt  # create an example file
-      - name: Run Pandoc
       - uses: docker://pandoc/core:2.9
         with:
           args: "-s -o Documentation~/index.html Documentation~/index.md"
