@@ -35,13 +35,10 @@ jobs:
       #    echo Add other actions to build,
       #    echo test, and deploy your project.
       #- run: echo "foo" > input.txt  # create an example file
+      - name: Run Pandoc
       - uses: docker://pandoc/core:2.9
         with:
-          args: |>  # allows you to break string into multiple lines
-            --standalone
-            --output=Documentation~/index.html
-            Documentation~/index.md
-
+          args: "-s -o Documentation~/index.html Documentation~/index.md"
 
 
 #jobs:
